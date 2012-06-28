@@ -17,10 +17,16 @@ public class Pannel extends JPanel{
         g.setColor(Color.white);
         g.fillRect(0, 0, this.getWidth(), this.getHeight());
         
+        // Adding the nodes and their agents in the environment
 		for (int i=0;i<Environment.node.length; i++)
 			addNode(g);
 		
-		nbNodes=0;
+		// Adding the paths between nodes
+		for(int i=0;i<Parameters.getTotalNbLinks();i++){
+			addPath(g,Parameters.getTabLink(i),Parameters.getTabLink2(i));
+		}
+		
+		
 	}
 	
 	public void addNode(Graphics g){
