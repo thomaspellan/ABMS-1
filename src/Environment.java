@@ -35,7 +35,43 @@ public class Environment extends JFrame{
 		
 		this.setVisible(true);
 		
+	
+		int i=1;
 
+		while(true){
+			
+			try {
+	            Thread.sleep(1000);
+			} catch (InterruptedException e) {
+	            // TODO Auto-generated catch block
+	            e.printStackTrace();
+			}
+		
+		agent[3].move(i);
+		
+		int posXNode=0;
+		int posYNode=0;
+		
+		if (agent[3].getIdActualnode()%2==0){
+			posXNode=300;
+			posYNode=100*(agent[3].getIdActualnode()/2);
+		}
+		
+		else{
+				posXNode=100;
+				posYNode=100*((agent[3].getIdActualnode()/2)+1);
+			}
+		
+		agent[3].setPosX((int)(Math.random()*(sizeNode-10)+posXNode)); //Attribute a random place for the agent in the node
+		agent[3].setPosY((int)(Math.random()*(sizeNode-10)+posYNode)); //Attribute a random place for the agent in the node
+		
+		pan.repaint();
+		
+		i++;
+		
+		if (i==4) i=1;
+		
+		}
 	}
 	
 	private void setEnv(){
@@ -84,7 +120,7 @@ public class Environment extends JFrame{
 	
 	private void move(){
 		
-		
+		pan.repaint();
 	
 	}
 }
