@@ -1,12 +1,12 @@
 
 public class Parameters {
 
-	private static int TotalNbNodes; // Total number of nodes in the environment
-	private static int TotalNbAgents; // Total number of agents in the environment
-	private static int TotalNbLinks; // Total number of links in the environment
-	private static int[] tabLink= new int[100];
-	private static int[] tabLink2= new int[100];
-	
+	private static int TotalNbNodes=4; // Total number of nodes in the environment
+	private static int TotalNbAgents=9; // Total number of agents in the environment
+	private static int TotalNbLinks=4; // Total number of links in the environment
+	private static int[] tabLink= {1,1,2,3};
+	private static int[] tabLink2= {2,3,4,4};
+
 	
 	//Getters and setters
 	public static int getTotalNbNodes() {

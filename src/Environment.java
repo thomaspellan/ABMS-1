@@ -47,31 +47,35 @@ public class Environment extends JFrame{
 	            e.printStackTrace();
 			}
 		
-		agent[3].move(i);
+		
+		move(agent[3],(int)(Math.random() * (node.length)) + 1);
+		
+		
+		}
+	}
+	
+	private void move(Agent agent, int destNode){
+
+		
+		agent.move(destNode);
 		
 		int posXNode=0;
 		int posYNode=0;
 		
-		if (agent[3].getIdActualnode()%2==0){
+		if (agent.getIdActualnode()%2==0){
 			posXNode=300;
-			posYNode=100*(agent[3].getIdActualnode()/2);
+			posYNode=100*(agent.getIdActualnode()/2);
 		}
 		
 		else{
 				posXNode=100;
-				posYNode=100*((agent[3].getIdActualnode()/2)+1);
+				posYNode=100*((agent.getIdActualnode()/2)+1);
 			}
 		
-		agent[3].setPosX((int)(Math.random()*(sizeNode-10)+posXNode)); //Attribute a random place for the agent in the node
-		agent[3].setPosY((int)(Math.random()*(sizeNode-10)+posYNode)); //Attribute a random place for the agent in the node
+		agent.setPosX((int)(Math.random()*(sizeNode-10)+posXNode)); //Attribute a random place for the agent in the node
+		agent.setPosY((int)(Math.random()*(sizeNode-10)+posYNode)); //Attribute a random place for the agent in the node
 		
 		pan.repaint();
-		
-		i++;
-		
-		if (i==4) i=1;
-		
-		}
 	}
 	
 	private void setEnv(){
@@ -117,10 +121,4 @@ public class Environment extends JFrame{
 		}
 	}
 	
-	
-	private void move(){
-		
-		pan.repaint();
-	
-	}
 }

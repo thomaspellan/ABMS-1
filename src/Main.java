@@ -5,7 +5,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		Scanner sc = new Scanner(System.in);
+		/*Scanner sc = new Scanner(System.in);
 		System.out.println("How many Nodes would you like to create?");
 		int i=sc.nextInt();
 		Parameters.setTotalNbNodes(i);
@@ -25,7 +25,7 @@ public class Main {
 			j=sc.nextInt();
 			Parameters.setTabLink2(i,j);
 			i++;
-		}
+		}*/
 		
 		Environment env= new Environment();
 		
